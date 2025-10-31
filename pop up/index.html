@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup Desgin</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <button type="submit" class="btn" onclick="openPopup()">Boom 💥</button>
+        <div class="popup" id="popup">
+            <img src="./404-tick.png">
+            <h2>Thank You</h2>
+            <p>Your Details has been successfully submitted.</p>
+            <button type="button" onclick="closePopup()">See Ya 👋</button>
+        </div>
+    </div>
+
+    <script>
+        let popup = document.getElementById("popup");
+        let popupText = popup.querySelector("p");
+        let popupTitle = popup.querySelector("h2");
+
+        const captions = [
+            "Mission accomplished 🚀",
+            "Your details are safer than Fort Knox 🔒",
+            "Submission complete… now go grab a coffee ☕",
+            "Boom! You just broke the submit button 💥",
+            "Thanks! You’re officially awesome 😎",
+            "Oops! You clicked the button… now you’re stuck with me! 😏",
+            "Ta-da! The magic button has summoned a popup! 🎉",
+            "Hello human, I’m your friendly popup. Don’t ignore me! 🤖",
+            "Guess what? This popup is cooler than your ex. 😎",
+            "Boom! You just unlocked secret popup powers! 🔥"
+        ];
+
+        function openPopup() {
+            // Random funny caption
+            let randomCaption = captions[Math.floor(Math.random() * captions.length)];
+
+            popupTitle.innerText = "Thank You 🎉";
+            popupText.innerText = randomCaption;
+            popup.classList.add("open-popup");
+        }
+
+        function closePopup() {
+            popup.classList.remove("open-popup");
+        }
+    </script>
+
+    <!-- <script>
+        let popup = document.getElementById("popup");
+
+        function openPopup(){
+            popup.classList.add("open-popup")
+        }
+
+        function closePopup(){
+            popup.classList.remove("open-popup")
+        }
+    </script> -->
+</body>
+
+</html>

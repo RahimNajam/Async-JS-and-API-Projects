@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JavaScript Practice & Games</title>
+
+  <!-- Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <style>
+    body {
+      background: linear-gradient(135deg, #0a0a0a, #1a001f, #2b0000);
+      background-size: 300% 300%;
+      animation: bgShift 15s ease infinite;
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    @keyframes bgShift {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    header {
+      text-align: center;
+      padding: 100px 20px 30px;
+    }
+
+    header h1 {
+      font-size: 2.4rem;
+      color: #ff3366;
+      text-shadow: 0 0 12px rgba(255, 50, 100, 0.6);
+      letter-spacing: 1px;
+    }
+
+    header p {
+      font-size: 1rem;
+      margin-top: 10px;
+      opacity: 0.9;
+      color: #ffd6e0;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 0, 60, 0.2);
+      border-radius: 15px;
+      transition: all 0.4s ease;
+      backdrop-filter: blur(6px);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: conic-gradient(
+        from 180deg,
+        #ff0033,
+        #ff00ff,
+        #ff6600,
+        #ff0033
+      );
+      transition: all 0.6s ease;
+      opacity: 0;
+      z-index: 0;
+      transform: rotate(0deg);
+    }
+
+    .card:hover::before {
+      opacity: 0.25;
+      transform: rotate(180deg);
+    }
+
+    .card-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .card:hover {
+      transform: translateY(-8px) scale(1.03);
+      box-shadow: 0 8px 25px rgba(255, 50, 100, 0.4);
+    }
+
+    .card-title {
+      color: #ff5577;
+      font-weight: 600;
+    }
+
+    .btn-custom {
+      background: linear-gradient(90deg, #ff3366, #a000ff);
+      color: white;
+      border: none;
+      border-radius: 25px;
+      padding: 8px 18px;
+      transition: 0.4s ease;
+    }
+
+    .btn-custom:hover {
+      background: linear-gradient(90deg, #a000ff, #ff3366);
+      transform: scale(1.08);
+      box-shadow: 0 0 12px rgba(255, 51, 102, 0.7);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 23vh;
+      padding: 15px;
+      font-size: 0.85rem;
+      background: rgba(255, 255, 255, 0.05);
+      border-top: 1px solid rgba(255, 0, 60, 0.15);
+      color: #ffccd5;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🔥 JavaScript Practice & Games</h1>
+    <p>Explore my mini JavaScript projects below 👇</p>
+  </header>
+
+  <main class="container mb-5">
+    <div class="row g-4 justify-content-center">
+
+      <div class="col-md-3 col-sm-6">
+        <div class="card text-center p-4">
+          <div class="card-content">
+            <h5 class="card-title">API IMAGE GALLERY</h5>
+            <p class="card-text text-white">Browse a gallery of images fetched live from an API. 📸</p>
+            <a href="./Api Image Gallery/index.html" class="btn btn-custom">View Project</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6">
+        <div class="card text-center p-4">
+          <div class="card-content">
+            <h5 class="card-title">Random Pop-Up</h5>
+            <p class="card-text text-white ">Watch fun random pop-ups appear dynamically on screen. 🎯</p>
+            <a href="./pop up/index.html" class="btn btn-custom">View Project</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6">
+        <div class="card text-center p-4">
+          <div class="card-content">
+            <h5 class="card-title">Quote of the Day (API)</h5>
+            <p class="card-text text-white">Get an inspiring quote daily — powered by an API. 💬</p>
+            <a href="./Quote of the Day/index.html" class="btn btn-custom">View Project</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6">
+        <div class="card text-center p-4">
+          <div class="card-content">
+            <h5 class="card-title">Locomotive Landing Page (GSAP + Swiper)</h5>
+            <p class="card-text text-white">A smooth animated landing page with scrolling effects. 🚀</p>
+            <a href="./Locomotive - Gsap - Swipper/index.html" class="btn btn-custom">View Project</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-6">
+        <div class="card text-center p-4">
+          <div class="card-content">
+            <h5 class="card-title">Text to Speak</h5>
+            <p class="card-text text-white">Convert your written text into realistic voice output. 🔊</p>
+            <a href="./Text to speak/index.html" class="btn btn-custom">View Project</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-6">
+        <div class="card text-center p-4">
+          <div class="card-content">
+            <h5 class="card-title">Weather App</h5>
+            <p class="card-text text-white">Check real-time weather updates of any city instantly. 🌤️</p>
+            <a href="./Weather app/index.html" class="btn btn-custom">View Project</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <p>Made with ❤️ by Rahim Najam</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
